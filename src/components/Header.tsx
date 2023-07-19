@@ -5,8 +5,8 @@ import { clamp } from "@/helpers/clamp";
 export const Header: React.FC = () => {
   const isHomePage: boolean = usePathname() === "/";
 
-  const headerRef = useRef<HTMLInputElement>(null);
-  const avatarRef = useRef<HTMLInputElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const avatarRef = useRef<HTMLDivElement>(null);
   const isInitial = useRef<boolean>(true);
 
   useEffect(() => {
