@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { clamp } from "@/helpers/clamp";
+import { Container } from "./Container";
 
 export const Header: React.FC = () => {
   const isHomePage: boolean = usePathname() === "/";
@@ -125,7 +126,7 @@ export const Header: React.FC = () => {
             >
               <div
                 className="top-[var(--avatar-top,theme(spacing.3))] w-full"
-                style={{ position: "var(--header-inner-position)" }}
+                style={{ position: "var(--header-inner-position)" as any }}
               >
                 <div className="relative">
                   <AvatarContainer
@@ -148,7 +149,7 @@ export const Header: React.FC = () => {
         <div
           ref={headerRef}
           className="top-0 z-10 h-16 pt-6"
-          style={{ position: "var(--header-position)" }}
+          style={{ position: "var(--header-position)" as any }}
         >
           <Container
             className="top-[var(--header-top,theme(spacing.6))] w-full"
