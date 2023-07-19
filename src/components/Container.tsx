@@ -1,22 +1,17 @@
 import { forwardRef } from "react";
 import { classNames } from "@/helpers/classNames";
+import { ContainerIF } from "@/app/interfaces/ContainerIF";
 
-const OuterContainer = forwardRef(function OuterContainer(
-  { className, children, ...props },
-  ref: 
-) {
-  return (
+const OuterContainer = forwardRef<HTMLDivElement, ContainerIF>(
+  ({ className, children, ...props }, ref) => (
     <div ref={ref} className={classNames("sm:px-8", className)} {...props}>
       <div className="mx-auto max-w-7xl lg:px-8">{children}</div>
     </div>
-  );
-});
+  )
+);
 
-const InnerContainer = forwardRef(function InnerContainer(
-  { className, children, ...props },
-  ref
-) {
-  return (
+const InnerContainer = forwardRef<HTMLDivElement, ContainerIF>(
+  ({ className, children, ...props }, ref) => (
     <div
       ref={ref}
       className={classNames("relative px-4 sm:px-8 lg:px-12", className)}
@@ -24,19 +19,18 @@ const InnerContainer = forwardRef(function InnerContainer(
     >
       <div className="mx-auto max-w-2xl lg:max-w-5xl">{children}</div>
     </div>
-  );
-});
+  )
+);
 
-export const Container = forwardRef(function Container(
-  { children, ...props },
-  ref
-) {
-  return (
+export const Container = forwardRef<HTMLDivElement, ContainerIF>(
+  ({ children, ...props }, ref) => (
     <OuterContainer ref={ref} {...props}>
-      <InnerContainer>{children}</InnerContainer>
+      <InnerContainer ref={ref} {...props}>
+        {children}
+      </InnerContainer>
     </OuterContainer>
-  );
-});
+  )
+);
 
 Container.Outer = OuterContainer;
 Container.Inner = InnerContainer;
