@@ -3,11 +3,11 @@ import { usePathname } from "next/navigation";
 import { clamp } from "@/helpers/clamp";
 
 export const Header: React.FC = () => {
-  const isHomePage = usePathname() === "/";
+  const isHomePage: boolean = usePathname() === "/";
 
-  const headerRef = useRef();
-  const avatarRef = useRef();
-  const isInitial = useRef(true);
+  const headerRef = useRef<HTMLInputElement>(null);
+  const avatarRef = useRef<HTMLInputElement>(null);
+  const isInitial = useRef<boolean>(true);
 
   useEffect(() => {
     const downDelay = avatarRef.current?.offsetTop ?? 0;
@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
     const removeProperty = (property: string): string =>
       document.documentElement.style.removeProperty(property);
 
-    function updateHeaderStyles() {
+    const updateHeaderStyles = (): void => {
       const { top, height } = headerRef.current.getBoundingClientRect();
       const scrollY = clamp(
         window.scrollY,
@@ -54,45 +54,45 @@ export const Header: React.FC = () => {
         setProperty("--header-top", "0px");
         setProperty("--avatar-top", "0px");
       }
-    }
+    };
 
-    function updateAvatarStyles() {
+    const updateAvatarStyles = (): void => {
       if (!isHomePage) {
         return;
       }
 
-      const fromScale = 1;
-      const toScale = 36 / 64;
-      const fromX = 0;
-      const toX = 2 / 16;
+      const fromScale: number = 1;
+      const toScale: number = 36 / 64;
+      const fromX: number = 0;
+      const toX: number = 2 / 16;
 
-      const scrollY = downDelay - window.scrollY;
+      const scrollY: number = downDelay - window.scrollY;
 
-      const notClampedScale =
+      const notClampedScale: number =
         (scrollY * (fromScale - toScale)) / downDelay + toScale;
-      const scale = clamp(notClampedScale, fromScale, toScale);
+      const scale: number = clamp(notClampedScale, fromScale, toScale);
 
-      const notClampedX = (scrollY * (fromX - toX)) / downDelay + toX;
-      const x = clamp(notClampedX, fromX, toX);
+      const notClampedX: number = (scrollY * (fromX - toX)) / downDelay + toX;
+      const x: number = clamp(notClampedX, fromX, toX);
 
       setProperty(
         "--avatar-image-transform",
         `translate3d(${x}rem, 0, 0) scale(${scale})`
       );
 
-      const borderScale = 1 / (toScale / scale);
-      const borderX = (-toX + x) * borderScale;
-      const borderTransform = `translate3d(${borderX}rem, 0, 0) scale(${borderScale})`;
+      const borderScale: number = 1 / (toScale / scale);
+      const borderX: number = (-toX + x) * borderScale;
+      const borderTransform: string = `translate3d(${borderX}rem, 0, 0) scale(${borderScale})`;
 
       setProperty("--avatar-border-transform", borderTransform);
       setProperty("--avatar-border-opacity", scale === toScale ? "1" : "0");
-    }
+    };
 
-    function updateStyles() {
+    const updateStyles = (): void => {
       updateHeaderStyles();
       updateAvatarStyles();
       isInitial.current = false;
-    }
+    };
 
     updateStyles();
     window.addEventListener("scroll", updateStyles, { passive: true });
