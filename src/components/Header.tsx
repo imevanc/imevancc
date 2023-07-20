@@ -7,6 +7,7 @@ import { Container } from "./Container";
 import { AvatarContainer } from "./AvatarContainer";
 import { Avatar } from "./Avatar";
 import { MobileNavigation } from "./MobileNavigation";
+import { DesktopNavigation } from "./DesktopNavigation";
 
 export const Header: React.FC = () => {
   const isHomePage: boolean = usePathname() === "/";
@@ -170,7 +171,7 @@ export const Header: React.FC = () => {
               </div>
               <div className="flex flex-1 justify-end md:justify-center">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
-                {/* <DesktopNavigation className="pointer-events-auto hidden md:block" /> */}
+                <DesktopNavigation className="pointer-events-auto hidden md:block" />
               </div>
               {/* <div className="flex justify-end md:flex-1">
                 <div className="pointer-events-auto">
