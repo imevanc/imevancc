@@ -6,6 +6,7 @@ import { clamp } from "@/helpers/clamp";
 import { Container } from "./Container";
 import { AvatarContainer } from "./AvatarContainer";
 import { Avatar } from "./Avatar";
+import { MobileNavigation } from "./MobileNavigation";
 
 export const Header: React.FC = () => {
   const isHomePage: boolean = usePathname() === "/";
@@ -167,11 +168,11 @@ export const Header: React.FC = () => {
                   </AvatarContainer>
                 )}
               </div>
-              {/* <div className="flex flex-1 justify-end md:justify-center">
+              <div className="flex flex-1 justify-end md:justify-center">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
-                <DesktopNavigation className="pointer-events-auto hidden md:block" />
+                {/* <DesktopNavigation className="pointer-events-auto hidden md:block" /> */}
               </div>
-              <div className="flex justify-end md:flex-1">
+              {/* <div className="flex justify-end md:flex-1">
                 <div className="pointer-events-auto">
                   <ModeToggle />
                 </div>
