@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { clamp } from "@/helpers/clamp";
