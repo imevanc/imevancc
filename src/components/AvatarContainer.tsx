@@ -1,4 +1,4 @@
-import { AvatarContainerIF } from "@/app/interfaces/AvatarContainerIF";
+import { AvatarContainerIF } from "@/interfaces/AvatarContainerIF";
 import { classNames } from "@/helpers/classNames";
 
 export const AvatarContainer: React.FC<AvatarContainerIF> = ({
