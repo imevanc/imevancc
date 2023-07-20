@@ -1,6 +1,7 @@
+import type { NextPage } from "next/types";
 import { Header } from "@/components/Header";
 
-export const Home: React.FC = () => {
+const Home: NextPage = () => {
   return (
     <>
       <div className="fixed inset-0 flex justify-center sm:px-8">
@@ -12,3 +13,5 @@ export const Home: React.FC = () => {
     </>
   );
 };
+
+export default Home;

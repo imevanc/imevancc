@@ -1,4 +1,5 @@
-type Wildcard<T> = T & { [key: string]: unknown };
+import { Wildcard } from "@/types/Wildcard";
+
 export interface ContainerIF {
   className: string;
   children: React.ReactNode;

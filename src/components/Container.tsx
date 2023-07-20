@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { classNames } from "@/helpers/classNames";
-import { ContainerIF } from "@/app/interfaces/ContainerIF";
+import { ContainerIF } from "@/interfaces/ContainerIF";
 
 const OuterContainer = forwardRef<HTMLDivElement, ContainerIF>(
   ({ className, children, style, ...props }, ref) => (

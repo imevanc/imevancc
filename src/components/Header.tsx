@@ -1,7 +1,11 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { clamp } from "@/helpers/clamp";
 import { Container } from "./Container";
+import { AvatarContainer } from "./AvatarContainer";
+import { Avatar } from "./Avatar";
 
 export const Header: React.FC = () => {
   const isHomePage: boolean = usePathname() === "/";
@@ -21,7 +25,7 @@ export const Header: React.FC = () => {
       document.documentElement.style.removeProperty(property);
 
     const updateHeaderStyles = (): void => {
-      const { top, height } = headerRef.current.getBoundingClientRect();
+      const { top, height } = headerRef.current!.getBoundingClientRect();
       const scrollY = clamp(
         window.scrollY,
         0,
@@ -163,7 +167,7 @@ export const Header: React.FC = () => {
                   </AvatarContainer>
                 )}
               </div>
-              <div className="flex flex-1 justify-end md:justify-center">
+              {/* <div className="flex flex-1 justify-end md:justify-center">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
                 <DesktopNavigation className="pointer-events-auto hidden md:block" />
               </div>
@@ -171,7 +175,7 @@ export const Header: React.FC = () => {
                 <div className="pointer-events-auto">
                   <ModeToggle />
                 </div>
-              </div>
+              </div> */}
             </div>
           </Container>
         </div>
