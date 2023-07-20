@@ -1,4 +1,4 @@
-export interface MobileNavItemIF {
+export interface ItemIF {
   href: string;
   children: React.ReactNode;
 }
