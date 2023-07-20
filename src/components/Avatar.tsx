@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { classNames } from "@/helpers/classNames";
 import { AvatarIF } from "@/interfaces/AvatarIF";
-import avatarImage from "@/images/avatar.jpg";
+import avatarImage from "@/images/avatar.png";
 
 export const Avatar: React.FC<AvatarIF> = ({
   large = false,
