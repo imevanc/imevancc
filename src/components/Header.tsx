@@ -8,6 +8,7 @@ import { AvatarContainer } from "./AvatarContainer";
 import { Avatar } from "./Avatar";
 import { MobileNavigation } from "./MobileNavigation";
 import { DesktopNavigation } from "./DesktopNavigation";
+import { ToggleButton } from "./ToggleButton";
 
 export const Header: React.FC = () => {
   const isHomePage: boolean = usePathname() === "/";
@@ -16,7 +17,7 @@ export const Header: React.FC = () => {
   const avatarRef = useRef<HTMLDivElement>(null);
   const isInitial = useRef<boolean>(true);
 
-  useEffect(() => {
+  useEffect((): (() => void) => {
     const downDelay = avatarRef.current?.offsetTop ?? 0;
     const upDelay = 64;
 
@@ -105,7 +106,7 @@ export const Header: React.FC = () => {
     window.addEventListener("scroll", updateStyles, { passive: true });
     window.addEventListener("resize", updateStyles);
 
-    return () => {
+    return (): void => {
       window.removeEventListener("scroll", updateStyles);
       window.removeEventListener("resize", updateStyles);
     };
@@ -173,11 +174,11 @@ export const Header: React.FC = () => {
                 <MobileNavigation className="pointer-events-auto md:hidden" />
                 <DesktopNavigation className="pointer-events-auto hidden md:block" />
               </div>
-              {/* <div className="flex justify-end md:flex-1">
+              <div className="flex justify-end md:flex-1">
                 <div className="pointer-events-auto">
-                  <ModeToggle />
+                  <ToggleButton />
                 </div>
-              </div> */}
+              </div>
             </div>
           </Container>
         </div>
