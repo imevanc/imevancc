@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Head from "next/head";
+import Script from "next/script";
 
 import "focus-visible";
 
@@ -53,10 +53,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <script dangerouslySetInnerHTML={{ __html: toggleMode }} />
-      </Head>
-      <body>
+      <head>
+        <Script dangerouslySetInnerHTML={{ __html: toggleMode }} />
+      </head>
+      <body className="flex h-full flex-col bg-zinc-100 dark:bg-black">
         <div className="fixed inset-0 flex justify-center sm:px-8">
           <div className="flex w-full max-w-7xl lg:px-8">
             <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
