@@ -1,5 +1,11 @@
 import type { NextPage } from "next/types";
 import { Container } from "@/components/Container";
+import { SocialLink } from "@/components/SocialLink";
+import {
+  GitHubIcon,
+  InstagramIcon,
+  TwitterIcon,
+} from "@/components/SocialIcons";
 
 const Home: NextPage = () => {
   return (
@@ -16,28 +22,23 @@ const Home: NextPage = () => {
           dog, such as training him for scent detection, hiking, or
           paddleboarding.
         </p>
-        {/* <div className="mt-6 flex gap-6">
+        <div className="mt-6 flex gap-6">
           <SocialLink
-            href="https://twitter.com"
+            href="https://twitter.com/imevancc"
             aria-label="Follow on Twitter"
             icon={TwitterIcon}
           />
           <SocialLink
-            href="https://instagram.com"
+            href="https://www.instagram.com/imevancc/"
             aria-label="Follow on Instagram"
             icon={InstagramIcon}
           />
           <SocialLink
-            href="https://github.com"
+            href="https://github.com/imevanc"
             aria-label="Follow on GitHub"
             icon={GitHubIcon}
           />
-          <SocialLink
-            href="https://linkedin.com"
-            aria-label="Follow on LinkedIn"
-            icon={LinkedInIcon}
-          />
-        </div> */}
+        </div>
       </div>
     </Container>
   );
