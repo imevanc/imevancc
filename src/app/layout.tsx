@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   title: "Evan - Software Engineer, Outdoor Lover, and Amateur Photographer",
   description:
     "I'm Evan, a software developer based in the UK. I build accessible and inclusive products and digital experiences for the web. My passion is about frontend technologies and making the developer and user experience better. When I'm not working, I enjoy doing things with my dog, such as training him for scent detection, hiking, or paddleboarding.",
+  icons: {
+    icon: {
+      url: "/avatar-favicon.png",
+      type: "image/png",
+    },
+    shortcut: { url: "/avatar-favicon.png", type: "image/png" },
+  },
 };
 
 const toggleMode = `
@@ -55,7 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script dangerouslySetInnerHTML={{ __html: toggleMode }} />
+        <Script dangerouslySetInnerHTML={{ __html: toggleMode }} />{" "}
       </head>
       <body className="flex h-full flex-col bg-zinc-100 dark:bg-black">
         <div className="fixed inset-0 flex justify-center sm:px-8">
