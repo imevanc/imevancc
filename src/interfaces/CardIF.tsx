@@ -3,3 +3,8 @@ export interface CardIF {
   children: React.FC;
   as: React.ElementType;
 }
+
+export interface CardLinkIF {
+  children: React.ReactNode;
+  href: string;
+}
