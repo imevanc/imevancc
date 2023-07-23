@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { classNames } from "@/helpers/classNames";
-import { CardIF, CardLinkIF } from "@/interfaces/CardIF";
+import { CardIF, CardLinkIF, CardTitleIF } from "@/interfaces/CardIF";
 
 const Card: React.FC<CardIF> = ({
   as: Component = "div",
@@ -27,8 +27,19 @@ const CardLink: React.FC<CardLinkIF> = ({ children, href }) => (
   </>
 );
 
+const CardTitle: React.FC<CardTitleIF> = ({
+  as: Component = "h2",
+  href,
+  children,
+}) => (
+  <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+    {href ? <CardLink href={href}>{children}</CardLink> : children}
+  </Component>
+);
+
 const CardNamespace = Object.assign(Card, {
   Link: CardLink,
+  Tittle: CardTitle,
 });
 
 export { CardNamespace as Card };
