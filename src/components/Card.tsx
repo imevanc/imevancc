@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { classNames } from "@/helpers/classNames";
-import { CardIF, CardLinkIF, CardTitleIF } from "@/interfaces/CardIF";
+import {
+  CardDescriptionIF,
+  CardIF,
+  CardLinkIF,
+  CardTitleIF,
+} from "@/interfaces/CardIF";
 
 const Card: React.FC<CardIF> = ({
   as: Component = "div",
@@ -37,9 +42,16 @@ const CardTitle: React.FC<CardTitleIF> = ({
   </Component>
 );
 
+const CardDescription: React.FC<CardDescriptionIF> = ({ children }) => (
+  <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+    {children}
+  </p>
+);
+
 const CardNamespace = Object.assign(Card, {
   Link: CardLink,
   Tittle: CardTitle,
+  Decription: CardDescription,
 });
 
 export { CardNamespace as Card };

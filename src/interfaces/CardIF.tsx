@@ -14,3 +14,7 @@ export interface CardTitleIF {
   href?: string;
   as?: React.ElementType;
 }
+
+export interface CardDescriptionIF {
+  children: React.ReactNode;
+}
