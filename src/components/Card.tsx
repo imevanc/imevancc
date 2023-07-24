@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { classNames } from "@/helpers/classNames";
 import {
+  CardCtaIF,
   CardDescriptionIF,
+  CardEyebrowIF,
   CardIF,
   CardLinkIF,
   CardTitleIF,
 } from "@/interfaces/CardIF";
+import { ChevronRightIcon } from "./UtilityIcons";
 
 const Card: React.FC<CardIF> = ({
   as: Component = "div",
@@ -48,10 +51,49 @@ const CardDescription: React.FC<CardDescriptionIF> = ({ children }) => (
   </p>
 );
 
+const CardCta: React.FC<CardCtaIF> = ({ children }) => (
+  <div
+    aria-hidden="true"
+    className="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500"
+  >
+    {children}
+    <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
+  </div>
+);
+
+const CardEyebrow: React.FC<CardEyebrowIF> = ({
+  as: Component = "p",
+  decorate = false,
+  className,
+  children,
+  ...props
+}) => (
+  <Component
+    className={classNames(
+      className,
+      "relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500",
+      decorate ? "pl-3.5" : ""
+    )}
+    {...props}
+  >
+    {decorate && (
+      <span
+        className="absolute inset-y-0 left-0 flex items-center"
+        aria-hidden="true"
+      >
+        <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
+      </span>
+    )}
+    {children}
+  </Component>
+);
+
 const CardNamespace = Object.assign(Card, {
   Link: CardLink,
   Tittle: CardTitle,
   Decription: CardDescription,
+  Cta: CardCta,
+  Eyebrow: CardEyebrow,
 });
 
 export { CardNamespace as Card };

@@ -18,3 +18,14 @@ export interface CardTitleIF {
 export interface CardDescriptionIF {
   children: React.ReactNode;
 }
+
+export interface CardCtaIF {
+  children: React.ReactNode;
+}
+
+export interface CardEyebrowIF {
+  className: string;
+  children: React.FC;
+  as?: React.ElementType;
+  decorate?: boolean;
+}
