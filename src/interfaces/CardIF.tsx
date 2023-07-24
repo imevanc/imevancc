@@ -22,3 +22,10 @@ export interface CardDescriptionIF {
 export interface CardCtaIF {
   children: React.ReactNode;
 }
+
+export interface CardEyebrowIF {
+  className: string;
+  children: React.FC;
+  as?: React.ElementType;
+  decorate?: boolean;
+}
