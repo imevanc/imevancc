@@ -18,3 +18,7 @@ export interface CardTitleIF {
 export interface CardDescriptionIF {
   children: React.ReactNode;
 }
+
+export interface CardCtaIF {
+  children: React.ReactNode;
+}

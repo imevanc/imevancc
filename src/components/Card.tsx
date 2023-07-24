@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { classNames } from "@/helpers/classNames";
 import {
+  CardCtaIF,
   CardDescriptionIF,
   CardIF,
   CardLinkIF,
   CardTitleIF,
 } from "@/interfaces/CardIF";
+import { ChevronRightIcon } from "./UtilityIcons";
 
 const Card: React.FC<CardIF> = ({
   as: Component = "div",
@@ -48,10 +50,21 @@ const CardDescription: React.FC<CardDescriptionIF> = ({ children }) => (
   </p>
 );
 
+const CardCta: React.FC<CardCtaIF> = ({ children }) => (
+  <div
+    aria-hidden="true"
+    className="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500"
+  >
+    {children}
+    <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />
+  </div>
+);
+
 const CardNamespace = Object.assign(Card, {
   Link: CardLink,
   Tittle: CardTitle,
   Decription: CardDescription,
+  Cta: CardCta,
 });
 
 export { CardNamespace as Card };
