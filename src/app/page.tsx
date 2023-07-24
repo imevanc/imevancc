@@ -7,6 +7,7 @@ import {
   TwitterIcon,
 } from "@/components/SocialIcons";
 import { Newsletter } from "@/components/Newsletter";
+import { Resume } from "@/components/Resume";
 
 const Home: NextPage = () => {
   return (
@@ -52,7 +53,7 @@ const Home: NextPage = () => {
           </div> */}
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Newsletter />
-            {/* <Resume /> */}
+            <Resume />
           </div>
         </div>
       </Container>
