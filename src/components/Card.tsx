@@ -12,7 +12,7 @@ import { ChevronRightIcon } from "./UtilityIcons";
 
 const Card: React.FC<CardIF> = ({
   as: Component = "div",
-  className,
+  className = "",
   children,
 }) => (
   <Component
@@ -64,7 +64,7 @@ const CardCta: React.FC<CardCtaIF> = ({ children }) => (
 const CardEyebrow: React.FC<CardEyebrowIF> = ({
   as: Component = "p",
   decorate = false,
-  className,
+  className = "",
   children,
   ...props
 }) => (
@@ -90,8 +90,8 @@ const CardEyebrow: React.FC<CardEyebrowIF> = ({
 
 const CardNamespace = Object.assign(Card, {
   Link: CardLink,
-  Tittle: CardTitle,
-  Decription: CardDescription,
+  Title: CardTitle,
+  Description: CardDescription,
   Cta: CardCta,
   Eyebrow: CardEyebrow,
 });

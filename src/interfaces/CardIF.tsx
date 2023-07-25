@@ -1,6 +1,6 @@
 export interface CardIF {
-  className: string;
-  children: React.FC;
+  className?: string;
+  children: React.ReactNode;
   as?: React.ElementType;
 }
 
@@ -24,8 +24,9 @@ export interface CardCtaIF {
 }
 
 export interface CardEyebrowIF {
-  className: string;
-  children: React.FC;
+  className?: string;
+  children: React.ReactNode;
   as?: React.ElementType;
   decorate?: boolean;
+  dateTime?: Date;
 }
