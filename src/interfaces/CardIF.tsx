@@ -28,5 +28,5 @@ export interface CardEyebrowIF {
   children: React.ReactNode;
   as?: React.ElementType;
   decorate?: boolean;
-  dateTime?: Date;
+  dateTime?: Date | string;
 }

@@ -122,3 +122,16 @@ export const BriefcaseIcon: React.FC<{ className: string }> = ({
     />
   </svg>
 );
+
+export const ArrowLeftIcon: React.FC<{ className: string }> = ({
+  className,
+}) => (
+  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" className={className}>
+    <path
+      d="M7.25 11.25 3.75 8m0 0 3.5-3.25M3.75 8h8.5"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
