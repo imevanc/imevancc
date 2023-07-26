@@ -11,8 +11,19 @@ import {
 import { Newsletter } from "@/components/Newsletter";
 import { Resume } from "@/components/Resume";
 import { Article } from "@/components/Article";
+import { ArticleIF } from "@/interfaces/ArticleIF";
 
 const Home: NextPage = () => {
+  const articles: Array<ArticleIF> = [
+    {
+      slug: "nextjs_aws_s3_upload",
+      author: "Evan Charalampidis",
+      date: "2022-04-19",
+      title: "Next.js + AWS S3 Upload",
+      description:
+        "An example of a Next.js application allowing you to upload photos to an Amazon Web Services S3 storage bucket.",
+    },
+  ];
   return (
     <>
       <Container className="mt-9">
@@ -49,11 +60,11 @@ const Home: NextPage = () => {
       </Container>
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          {/* <div className="flex flex-col gap-16">
+          <div className="flex flex-col gap-16">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
-          </div> */}
+          </div>
 
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Newsletter />
