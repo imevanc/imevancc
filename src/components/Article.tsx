@@ -1,7 +1,7 @@
 import { formatDate } from "@/helpers/formatDate";
 import { Card } from "./Card";
 
-export const Article: React.FC = ({ article }) => (
+export const Article: React.FC<{ article: any }> = ({ article }) => (
   <Card as="article">
     <Card.Title href={`/articles/${article.slug}`}>{article.title}</Card.Title>
     <Card.Eyebrow as="time" dateTime={article.date} decorate>
