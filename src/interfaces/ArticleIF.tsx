@@ -1,3 +1,7 @@
 export interface ArticleIF {
-  articles: string;
+  slug: string;
+  author: string;
+  date: string;
+  title: string;
+  description: string;
 }

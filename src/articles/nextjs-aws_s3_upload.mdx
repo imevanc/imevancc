@@ -10,9 +10,13 @@ export const meta = {
 
 export default (props) => <ArticleLayout meta={meta} {...props} />;
 
-When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.
+## DISCLAIMER
 
-To make this possible, we needed to squeeze every drop of performance out of the browser possible. And so Animaginary was born.
+If you follow this tutorial, you might end up paying for AWS services.
+
+## 👋 Introduction
+
+Let's make a simple Next.js application allowing you to upload photos to an Amazon Web Services S3 storage bucket. This tutorial is focused on how to create an IAM user and a storage bucket on Amazon Web Services, so I have included all the code on my [nextjs-aws-s3 github repo](https://github.com/imevanc/nextjs-aws-s3). It's Next.js in Typescript and I have used TailwindCSS for styling.
 
 ```js
 import { animate } from "@planetaria/animaginary";
