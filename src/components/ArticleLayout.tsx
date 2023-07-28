@@ -20,11 +20,12 @@ export const generateMetadata = async (
 export const ArticleLayout: React.FC<ArticleLayoutIF> = ({
   children,
   meta,
+  className,
 }) => {
   const router = useRouter();
 
   return (
-    <Container className="mt-16 lg:mt-32">
+    <Container className={`mt-16 lg:mt-32 ${className}`}>
       <div className="xl:relative">
         <div className="mx-auto max-w-2xl">
           <button
