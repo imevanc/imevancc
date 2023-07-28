@@ -6,7 +6,7 @@ const meta = {
 };
 
 export const NextAwsS3Article: React.FC = () => (
-  <ArticleLayout meta={meta} className="pb-4">
+  <ArticleLayout meta={meta}>
     <div className="max-w-2xl">
       <h1 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">
         DISCLAIMER
