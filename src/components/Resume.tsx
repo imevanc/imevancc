@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { Button } from "./Button";
 import { ArrowDownIcon, BriefcaseIcon } from "./UtilityIcons";
 

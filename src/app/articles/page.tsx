@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const ArticlesIndex: NextPage = () => (
   <SimpleLayout
-    title="My tech thoughts"
+    title="My thoughts about technology"
     intro="Writing on programming, software design, code architecture, and more, in chronological order."
   >
     <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">

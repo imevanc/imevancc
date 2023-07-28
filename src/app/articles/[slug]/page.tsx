@@ -1,18 +1,15 @@
-// { params }: { params: { slug: string } }
 "use client";
 
-import { ArticleLayout } from "@/components/ArticleLayout";
+import { usePathname } from "next/navigation";
+import { NextAwsS3Article } from "@/components/articles/NextAwsS3Article";
 
-const meta = {
-  author: "Evan Charalampidis",
-  date: "2022-04-19",
-  title: "Next.js + AWS S3 Upload",
-  description:
-    "An example of a Next.js application allowing you to upload photos to an Amazon Web Services S3 storage bucket.",
+const Page = () => {
+  const pathname = usePathname();
+  switch (pathname) {
+    case "/articles/nextjs_aws_s3_upload":
+    default:
+      return <NextAwsS3Article />;
+  }
 };
-
-const Page = () => (
-  <ArticleLayout meta={meta}>This is an article</ArticleLayout>
-);
 
 export default Page;
