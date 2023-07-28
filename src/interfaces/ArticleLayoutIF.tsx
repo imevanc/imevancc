@@ -1,5 +1,5 @@
 export interface ArticleLayoutIF {
-  meta: { title: string; description: string; date: string; author: string };
+  meta: { title: string; description?: string; date: string; author?: string };
   children: React.ReactNode;
   className?: string;
 }
