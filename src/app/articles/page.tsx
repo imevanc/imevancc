@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "All of my thoughts on programming, code architecture, and more, collected in chronological order.",
 };
 
-const ArticlesIndex: NextPage = () => (
+const Page: NextPage = () => (
   <SimpleLayout
     title="My thoughts about technology"
     intro="Writing on programming, software design, code architecture, and more, in chronological order."
@@ -27,4 +27,4 @@ const ArticlesIndex: NextPage = () => (
   </SimpleLayout>
 );
 
-export default ArticlesIndex;
+export default Page;
