@@ -8,7 +8,6 @@ export const DesktopNavigation: React.FC<{ className: string }> = ({
       <DesktopNavItem href="/about">About</DesktopNavItem>
       <DesktopNavItem href="/articles">Articles</DesktopNavItem>
       <DesktopNavItem href="/projects">Projects</DesktopNavItem>
-      <DesktopNavItem href="/speaking">Speaking</DesktopNavItem>
       <DesktopNavItem href="/uses">Uses</DesktopNavItem>
     </ul>
   </nav>
