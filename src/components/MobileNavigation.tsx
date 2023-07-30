@@ -49,7 +49,6 @@ export const MobileNavigation: React.FC<{ className: string }> = ({
               <MobileNavItem href="/about">About</MobileNavItem>
               <MobileNavItem href="/articles">Articles</MobileNavItem>
               <MobileNavItem href="/projects">Projects</MobileNavItem>
-              <MobileNavItem href="/speaking">Speaking</MobileNavItem>
               <MobileNavItem href="/uses">Uses</MobileNavItem>
             </ul>
           </nav>
