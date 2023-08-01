@@ -1,5 +1,4 @@
-import type { NextPage } from "next/types";
-import type { Metadata } from "next";
+import type { NextPage, Metadata } from "next/types";
 import Image from "next/image";
 
 import { Card } from "@/components/Card";

@@ -1,5 +1,4 @@
-import type { NextPage } from "next/types";
-import type { Metadata } from "next";
+import type { NextPage, Metadata } from "next/types";
 
 import { SimpleLayout } from "@/components/SimpleLayout";
 import { ArticleIF } from "@/interfaces/ArticleIF";

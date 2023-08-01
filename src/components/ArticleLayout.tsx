@@ -1,4 +1,4 @@
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next/types";
 import { useRouter } from "next/navigation";
 
 import { Container } from "@/components/Container";
