@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata } from "next/types";
 import Script from "next/script";
 
 import "focus-visible";

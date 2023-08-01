@@ -1,8 +1,5 @@
-import type { NextPage } from "next/types";
-import type { Metadata } from "next";
+import type { NextPage, Metadata } from "next/types";
 
-import { Card } from "@/components/Card";
-import { Section } from "@/components/Section";
 import { SimpleLayout } from "@/components/SimpleLayout";
 import { Tool, ToolsSection } from "@/components/Tool";
 

@@ -50,6 +50,7 @@ export const MobileNavigation: React.FC<{ className: string }> = ({
               <MobileNavItem href="/articles">Articles</MobileNavItem>
               <MobileNavItem href="/projects">Projects</MobileNavItem>
               <MobileNavItem href="/uses">Uses</MobileNavItem>
+              <MobileNavItem href="/photography">Photography</MobileNavItem>
             </ul>
           </nav>
         </Popover.Panel>
