@@ -12,6 +12,7 @@ export const Footer: React.FC = () => (
               <FooterLink href="/articles">Articles</FooterLink>
               <FooterLink href="/projects">Projects</FooterLink>
               <FooterLink href="/uses">Uses</FooterLink>
+              <FooterLink href="/photography">Photography</FooterLink>
             </div>
             <p className="text-sm text-zinc-400 dark:text-zinc-500">
               &copy; {new Date().getFullYear()} Evan Charalampidis. All rights
