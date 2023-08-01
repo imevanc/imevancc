@@ -4,7 +4,11 @@ import { ContainerIF } from "@/interfaces/ContainerIF";
 
 const OuterContainer = forwardRef<HTMLDivElement, ContainerIF>(
   ({ className, children, style, ...props }, ref) => (
-    <div ref={ref} className={classNames("sm:px-8", className)} {...props}>
+    <div
+      ref={ref}
+      className={classNames("sm:px-8", className?.toString()!)}
+      {...props}
+    >
       <div className="mx-auto max-w-7xl lg:px-8">{children}</div>
     </div>
   )
@@ -14,7 +18,10 @@ const InnerContainer = forwardRef<HTMLDivElement, ContainerIF>(
   ({ className, children, ...props }, ref) => (
     <div
       ref={ref}
-      className={classNames("relative px-4 sm:px-8 lg:px-12", className)}
+      className={classNames(
+        "relative px-4 sm:px-8 lg:px-12",
+        className?.toString()!
+      )}
       {...props}
     >
       <div className="mx-auto max-w-2xl lg:max-w-5xl">{children}</div>

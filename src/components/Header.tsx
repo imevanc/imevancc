@@ -54,7 +54,6 @@ export const Header: React.FC = () => {
       }
 
       if (top === 0 && scrollY > 0 && scrollY >= downDelay) {
-        setProperty("--header-inner-position", "fixed");
         removeProperty("--header-top");
         removeProperty("--avatar-top");
       } else {
@@ -133,7 +132,7 @@ export const Header: React.FC = () => {
             >
               <div
                 className="top-[var(--avatar-top,theme(spacing.3))] w-full"
-                style={{ position: "var(--header-inner-position)" as any }}
+                style={{ position: "var(--header-inner-position)" as "static" }}
               >
                 <div className="relative">
                   <AvatarContainer
