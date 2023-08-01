@@ -9,6 +9,7 @@ export const DesktopNavigation: React.FC<{ className: string }> = ({
       <DesktopNavItem href="/articles">Articles</DesktopNavItem>
       <DesktopNavItem href="/projects">Projects</DesktopNavItem>
       <DesktopNavItem href="/uses">Uses</DesktopNavItem>
+      <DesktopNavItem href="/photography">Photography</DesktopNavItem>
     </ul>
   </nav>
 );
