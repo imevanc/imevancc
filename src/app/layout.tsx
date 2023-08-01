@@ -61,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html className="h-full antialiased" lang="en">
       <head>
         <Script dangerouslySetInnerHTML={{ __html: toggleMode }} />{" "}
       </head>
