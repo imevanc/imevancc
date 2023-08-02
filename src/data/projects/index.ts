@@ -23,13 +23,6 @@ export const projects: Array<ProjectIF> = [
     logo: logoPetPal,
   },
   {
-    name: "Linkage",
-    description:
-      "LinkAge is an app aiming to helps connect isolated elderly individuals with volunteers. It was created as part of the graduation project - Team Reactors.",
-    link: { href: "https://github.com/imevanc/linkage", label: "linkage" },
-    logo: logoLinkage,
-  },
-  {
     name: "Next.js with AWS S3",
     description:
       "An example of a Next.js application allowing you to upload photos to an Amazon Web Services S3 storage bucket.",
@@ -38,5 +31,12 @@ export const projects: Array<ProjectIF> = [
       label: "nextjs-aws-s3",
     },
     logo: logoNextjsAwsS3,
+  },
+  {
+    name: "Linkage",
+    description:
+      "LinkAge is an app aiming to helps connect isolated elderly individuals with volunteers. It was created as part of the graduation project - Team Reactors.",
+    link: { href: "https://github.com/imevanc/linkage", label: "linkage" },
+    logo: logoLinkage,
   },
 ];
