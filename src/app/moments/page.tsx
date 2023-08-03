@@ -6,7 +6,7 @@ import { Card } from "@/components/Card";
 import { MomentIF } from "@/interfaces/MomentIF";
 
 export const metadata: Metadata = {
-  title: "Photography - Evan Charalampidis",
+  title: "Moments - Evan Charalampidis",
   description: "A glance at my adventurous.",
 };
 
