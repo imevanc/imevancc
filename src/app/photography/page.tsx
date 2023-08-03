@@ -3,6 +3,7 @@ import type { NextPage, Metadata } from "next/types";
 import { SimpleLayout } from "@/components/SimpleLayout";
 import { moments } from "@/data/moments";
 import { Card } from "@/components/Card";
+import { MomentIF } from "@/interfaces/MomentIF";
 
 export const metadata: Metadata = {
   title: "Photography - Evan Charalampidis",
@@ -19,7 +20,7 @@ const Page: NextPage = () => (
       role="list"
       className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
     >
-      {moments.map((moment) => (
+      {moments.map((moment: MomentIF) => (
         <Card as="li" key={moment.title}>
           <img
             className="aspect-[3/2] rounded-2xl object-cover relative z-10 flex items-center justify-center bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0"
