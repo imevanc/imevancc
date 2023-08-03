@@ -1,27 +1,29 @@
-export const moments = [
+import { MomentIF } from "@/interfaces/MomentIF";
+
+export const moments: Array<MomentIF> = [
   {
-    title: "Leslie Alexander",
-    description: "Co-Founder / CEO",
-    url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+    title: "Helvellyn - 3,120ft",
+    description: "Different kind of Christmas",
+    url: "/moments/helvellyn.jpg",
   },
   {
-    title: "Leslie Alexander",
-    description: "Co-Founder / CEO",
-    url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+    title: "Mam Tor - 1,700ft",
+    description: "Frosty day in autumn",
+    url: "/moments/mamtor.jpg",
   },
   {
-    title: "Leslie Alexander",
-    description: "Co-Founder / CEO",
-    url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+    title: "Edinburgh - 150ft",
+    description: "Hanging around with friends",
+    url: "/moments/edinburgh.jpg",
   },
   {
-    title: "Leslie Alexander",
-    description: "Co-Founder / CEO",
-    url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+    title: "Windemere - 128ft",
+    description: "Lake cruise in Bowness",
+    url: "/moments/windemere.jpg",
   },
   {
-    title: "Leslie Alexander",
-    description: "Co-Founder / CEO",
-    url: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+    title: "Snowdon - 3,560ft",
+    description: "Breezy day in Yr Wyddfa",
+    url: "/moments/snowdon.jpg",
   },
 ];
