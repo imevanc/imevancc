@@ -1,4 +1,6 @@
-export const moments = [
+import { MomentIF } from "@/interfaces/MomentIF";
+
+export const moments: Array<MomentIF> = [
   {
     title: "Helvellyn - 3,120ft",
     description: "Different kind of Christmas",
