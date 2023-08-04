@@ -2,14 +2,16 @@
 
 import type { NextPage } from "next/types";
 import { usePathname } from "next/navigation";
-import { NextAwsS3Article } from "@/components/articles/NextAwsS3Article";
+import { NextAwsS3, WhatIsAnAPI } from "@/components/articles";
 
 const Page: NextPage = () => {
   const pathname = usePathname();
   switch (pathname) {
     case "/articles/nextjs_aws_s3_upload":
     default:
-      return <NextAwsS3Article />;
+      return <NextAwsS3 />;
+    case "/articles/what_is_an_api":
+      return <WhatIsAnAPI />;
   }
 };
 

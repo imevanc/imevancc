@@ -1,11 +1,11 @@
 import { ArticleLayout } from "@/components/ArticleLayout";
 
 const meta = {
-  date: "2022-04-19",
+  date: "2023-04-19",
   title: "Next.js + AWS S3 Upload",
 };
 
-export const NextAwsS3Article: React.FC = () => (
+export const NextAwsS3: React.FC = () => (
   <ArticleLayout meta={meta}>
     <div className="max-w-2xl">
       <h1 className="text-xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl">
