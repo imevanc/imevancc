@@ -2,6 +2,14 @@ import { ArticleIF } from "@/interfaces/ArticleIF";
 
 export const articles: Array<ArticleIF> = [
   {
+    slug: "react_state_vs_context",
+    author: "Evan Charalampidis",
+    date: "2023-08-09",
+    title: "React State vs. React Context: Deciding How to Manage State",
+    description:
+      "When working with React, effectively handling state is vital for creating solid applications.",
+  },
+  {
     slug: "beautify_git_log",
     author: "Evan Charalampidis",
     date: "2023-08-06",
