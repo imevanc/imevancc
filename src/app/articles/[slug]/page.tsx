@@ -2,7 +2,12 @@
 
 import type { NextPage } from "next/types";
 import { usePathname } from "next/navigation";
-import { NextAwsS3, WhatIsAnAPI, BeautifyGitLog } from "@/components/articles";
+import {
+  NextAwsS3,
+  WhatIsAnAPI,
+  BeautifyGitLog,
+  ReactStateVsContext,
+} from "@/components/articles";
 
 const Page: NextPage = () => {
   const pathname = usePathname();
@@ -14,6 +19,8 @@ const Page: NextPage = () => {
       return <WhatIsAnAPI />;
     case "/articles/beautify_git_log":
       return <BeautifyGitLog />;
+    case "/articles/react_state_vs_context":
+      return <ReactStateVsContext />;
   }
 };
 

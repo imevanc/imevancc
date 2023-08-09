@@ -1,7 +1,7 @@
 import { ArticleLayout } from "../ArticleLayout";
 
 const meta = {
-  date: "2023-05-06",
+  date: "2023-08-06",
   title: "Make your git log look better using a single command",
 };
 
