@@ -4,6 +4,7 @@ import type { NextPage } from "next/types";
 import { Container } from "@/components/Container";
 import { SocialLink } from "@/components/SocialLink";
 import {
+  DevToIcon,
   GitHubIcon,
   InstagramIcon,
   TwitterIcon,
@@ -29,6 +30,17 @@ const Home: NextPage = () => (
           paddleboarding.
         </p>
         <div className="mt-6 flex gap-6">
+          {" "}
+          <SocialLink
+            href="https://github.com/imevanc"
+            aria-label="Follow on GitHub"
+            icon={GitHubIcon}
+          />
+          <SocialLink
+            href="https://dev.to/imevanc"
+            aria-label="Follow on dev.to"
+            icon={DevToIcon}
+          />
           <SocialLink
             href="https://twitter.com/imevancc"
             aria-label="Follow on Twitter"
@@ -38,11 +50,6 @@ const Home: NextPage = () => (
             href="https://www.instagram.com/imevancc/"
             aria-label="Follow on Instagram"
             icon={InstagramIcon}
-          />
-          <SocialLink
-            href="https://github.com/imevanc"
-            aria-label="Follow on GitHub"
-            icon={GitHubIcon}
           />
         </div>
       </div>
