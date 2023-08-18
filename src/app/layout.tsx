@@ -63,7 +63,7 @@ export default function RootLayout({
   return (
     <html className="h-full antialiased" lang="en">
       <head>
-        <Script dangerouslySetInnerHTML={{ __html: toggleMode }} />{" "}
+        <Script id="layout" dangerouslySetInnerHTML={{ __html: toggleMode }} />{" "}
       </head>
       <body className="flex h-full flex-col bg-zinc-100 dark:bg-black">
         <div className="fixed inset-0 flex justify-center sm:px-8">
