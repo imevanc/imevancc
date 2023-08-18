@@ -39,6 +39,10 @@ const Container = forwardRef<HTMLDivElement, ContainerIF>(
   )
 );
 
+Container.displayName = "Container";
+OuterContainer.displayName = "OuterContainer";
+InnerContainer.displayName = "InnerContainer";
+
 const ContainerNamespace = Object.assign(Container, {
   Outer: OuterContainer,
   Inner: InnerContainer,
