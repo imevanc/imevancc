@@ -1,5 +1,4 @@
-import { Button } from "./Button";
-import { ArrowDownIcon, BriefcaseIcon } from "./UtilityIcons";
+import { BriefcaseIcon } from "./UtilityIcons";
 
 export const Resume: React.FC = () => {
   const resume = [
@@ -19,7 +18,7 @@ export const Resume: React.FC = () => {
     },
     {
       company: "Northcoders",
-      title: "Student Software Developer - not employed",
+      title: "Student Software Developer",
       logo: "/cv/northcoders.png",
       start: "2021",
       end: "2022",
@@ -64,10 +63,6 @@ export const Resume: React.FC = () => {
           </li>
         ))}
       </ol>
-      {/* <Button variant="secondary" className="group mt-6 w-full">
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button> */}
     </div>
   );
 };
