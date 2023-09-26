@@ -3,8 +3,18 @@ import logoPetPal from "@/images/logos/pet-pal.svg";
 import logoLinkage from "@/images/logos/linkage.svg";
 import logoNextjsAwsS3 from "@/images/logos/nextjs-aws-s3.svg";
 import logoImEvanC from "@/images/logos/avatar-favicon.png";
+import logoFastify from "@/images/logos/fastify.svg";
 
 export const projects: Array<ProjectIF> = [
+  {
+    name: "Fastify-TS-Mongo-Starter",
+    description: "This is a Fastify with Mongo starter project in TypeScript.",
+    link: {
+      href: "https://github.com/imevanc/fastify-typescript-mongo-starter",
+      label: "fastify-ts-mongo",
+    },
+    logo: logoFastify,
+  },
   {
     name: "ImEvanC",
     description:
