@@ -31,6 +31,10 @@ const Page: NextPage = () => (
           It's an iconic mouse - seamlessly integrated into the Apple ecosystem
           for performance.
         </Tool>
+        <Tool title="MX MASTER 3S">
+          It's an iconic mouse - seamlessly integrated into the Apple ecosystem
+          for performance.
+        </Tool>
       </ToolsSection>
       <ToolsSection title="Development tools">
         <Tool title="VS Code">
